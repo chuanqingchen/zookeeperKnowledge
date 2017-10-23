@@ -63,7 +63,7 @@ public class zkClient {
 	 */
 	@Test
 	public void zkGetData() throws Exception{
-		byte [] data = zk.getData("/liyongming03", false, new Stat());
+		byte [] data = zk.getData("/liyongming", false, new Stat());
 		System.out.println(new String(data,"UTF-8"));
 	}
 	/**
