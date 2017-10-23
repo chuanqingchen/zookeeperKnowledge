@@ -37,13 +37,14 @@ public class DistributeServer {
 	}
 	public List<String> getChildren() throws Exception, InterruptedException{
 		List<String> list = zk.getChildren("/", false);
+		System.out.println(list);
 		return list;
 	}
 	
 	public void createDistributeNode(String data) throws Exception, KeeperException, InterruptedException{
 		//创建唯一的节点
 		//创建临时节点
-		zk.create("/DistributeServer", data.getBytes("UTF-8"), Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT_SEQUENTIAL);
+		zk.create("/DistributeServer/"+data, data.getBytes("UTF-8"), Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT_SEQUENTIAL);
 	}
 	public void bussiuess(String args) throws Exception{
 		System.out.println("start " +args +"is working....");
@@ -56,11 +57,10 @@ public class DistributeServer {
 		ZooKeeper zk = distributeServer.getZk();
 		System.out.println(zk);
 		List<String> list = distributeServer.getChildren();
-		System.out.println(list);
 		//向zookeeper中添加节点数据
-		String aa = "192.168.120.3";
-		distributeServer.createDistributeNode(aa);
+		String abc = "20171023-1907";
+		distributeServer.createDistributeNode(abc);
 		//客户端的业务
-		distributeServer.bussiuess(aa);
+		distributeServer.bussiuess(abc);
 	}
 }
