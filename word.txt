@@ -1,5 +1,4 @@
 1.word
 2.socket servere服务器的开发....
-3.volitle这个关键字的理解   public String volitle aaa = "";
------volitle-----
-Java并发编程
+3.volatile这个关键字的理解   public String volatile aaa = "";
+-----volitle-----volatile
