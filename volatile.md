@@ -113,7 +113,5 @@ volatile不保证原子操作，所以，很容易读到脏数据。
 
 使用建议：在两个或者更多的线程访问的成员变量上使用volatile。当要访问的变量已在synchronized代码块中，或者为常量时，不必使用。 
 
-参考：
-http://sudalyl.blog.163.com/blog/static/1018092742010925901769/
 ###下面的链接地址
 *[参考地址](http://sudalyl.blog.163.com/blog/static/1018092742010925901769/)
