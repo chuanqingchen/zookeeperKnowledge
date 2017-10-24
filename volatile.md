@@ -115,3 +115,5 @@ volatile不保证原子操作，所以，很容易读到脏数据。
 
 参考：
 http://sudalyl.blog.163.com/blog/static/1018092742010925901769/
+###下面的链接地址
+*[参考地址](http://sudalyl.blog.163.com/blog/static/1018092742010925901769/)
