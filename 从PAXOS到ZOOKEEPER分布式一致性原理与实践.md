@@ -41,7 +41,7 @@ ZAB协议是支持崩溃恢复的原子广播协议
   ZAB协议白话描述：
   `---`
   ZAB协议中，所有的事物请求都交给集群中叫做Leader（Master）的服务器进行处理，当Leader或者Master服务器拿到数据后，将请求的事物事物专业术语叫做提议（Proposal）,并将提议发送给集群中的所有的Follower服务器，之后Leader服务器将等待所有follower服务器的反馈，一旦超过半数的服务器并不是所有的服务器做出了正确的反馈之后，Leader服务器将会再次向所有的Follower服务器发送Commit消息，要求将前面的proposal(提议提交)
-  `---`P66
+  `---`
 
 ### zookeeper基本概念
 ####集群角色
